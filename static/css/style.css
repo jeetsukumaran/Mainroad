@@ -89,6 +89,8 @@ body {
 .wrapper {
 	padding: 25px;
 	background: #fafaf0;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
 }
 
 .content {
@@ -400,10 +402,11 @@ select {
 	max-width: 100%;
 }
 
-/*** Header ***/
 .header {
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px 25px 0px 0px;
 	background: #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
 }
 
 .logo {
@@ -428,7 +431,7 @@ select {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1;
-	color: #800000;
+	color: #000000;
 	padding-top: 10px;
 	margin-top: 10px;
 	border-top: 1px solid #e5e5e5;
@@ -438,12 +441,12 @@ select {
 	border: 0;
 	margin: 0;
 	height: 5px;
-	background: #800000;
+	background: #000000;
 }
 
 /*** Navigation — Responsive-nav.js ***/
 .menu {
-	background: #807878;
+	background: #807878; /* top menu row */
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
@@ -479,7 +482,8 @@ select {
 	padding: 10px 15px;
 	display: block;
 	color: #fafaf0;
-	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	/* border-left: 1px solid rgba(255, 255, 255, 0.1); */
+	border-right: 1px solid #000000;
 	font-weight: 700;
 }
 
@@ -500,7 +504,7 @@ select {
 }
 
 .opened.menu__list {
-	border-top: 1px solid #800000;
+	border-top: 1px solid #000000;
 }
 
 .menu__item {
@@ -510,11 +514,11 @@ select {
 }
 
 .menu__item:hover {
-	background: #800000;
+	background: #000000;
 }
 
 .menu__item--active {
-	background: #800000;
+	background: #000000;
 }
 
 .menu__item:first-child {
@@ -535,13 +539,14 @@ select {
 	}
 
 	.menu {
-		border-bottom: 5px solid #800000;
+		border-bottom: 1px solid #000000;
 		min-height: 42px;
 	}
 
 	.menu__item {
 		float: left;
 		position: relative;
+		/* border-right: 1px solid #000000; */
 	}
 }
 
@@ -788,7 +793,11 @@ select {
 /*** Footer ***/
 .footer {
 	padding: 10px 25px;
-	border-top: 3px solid #999;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
 	background: #807878;
 }
 
@@ -979,7 +988,7 @@ textarea {
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 	text-transform: uppercase;
-	border-bottom: 3px solid #800000;
+	border-bottom: 1px solid #000000; /* underline on side bar titles */
 }
 
 .widget-social__link {
