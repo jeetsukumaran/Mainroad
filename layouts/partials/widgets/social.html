@@ -1,4 +1,4 @@
-{{- if or .Site.Params.widgets.social_facebook .Site.Params.widgets.social_twitter .Site.Params.widgets.social_linkedin .Site.Params.widgets.social_github .Site.Params.widgets.social_google_plus .Site.Params.widgets.social_email }}
+{{- if or .Site.Params.widgets.social_facebook .Site.Params.widgets.social_twitter .Site.Params.widgets.social_linkedin .Site.Params.widgets.social_github .Site.Params.widgets.social_google_plus .Site.Params.widgets.social_email .Site.Params.widgets.social_flickr }}
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
@@ -39,6 +39,14 @@
 			<a class="widget-social__link widget__link btn" title="Google Plus" rel="noopener noreferrer" href="https://plus.google.com/{{ . }}" target="_blank">
 				<svg class="widget-social__link-icon icon-googleplus" viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="M0 279c-2-92 66-170 156-173 43-2 83 15 115 45l-43 45C201 177 167 164 132 177c-53 19-81 81-62 136s79 85 132 64c28-11 45-38 53-64l-92 0v-60H320c0 49-4 98-34 136-60 70-162 77-228 15C22 373 2 328 0 279L0 279zM418 205h47l0 49H512v49h-47l0 49h-47v-49h-47v-49h47V205z"/></svg>
 				<span>{{ . }}</span>
+			</a>
+		</div>
+		{{- end }}
+		{{- with .Site.Params.widgets.social_flickr }}
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Flickr" rel="noopener noreferrer" href="https://www.flickr.com/{{ . }}" target="_blank">
+                <svg class="widget-social__link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"><path d="M17 5c-1.961 0-3.731.809-5.002 2.108-1.27-1.299-3.038-2.108-4.998-2.108-3.866 0-7 3.134-7 7s3.134 7 7 7c1.96 0 3.728-.809 4.998-2.108 1.271 1.299 3.041 2.108 5.002 2.108 3.866 0 7-3.134 7-7s-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/></svg>
+				<span>Flickr</span>
 			</a>
 		</div>
 		{{- end }}
