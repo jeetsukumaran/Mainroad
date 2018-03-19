@@ -961,15 +961,15 @@ textarea {
 .widget-search__form {
 	display: block;
 	margin: 0 auto;
-	background: #888080;
-    border: 1px solid #000000;
+	/* background: #888080; */
+    /* border: 1px solid #000000; */
 }
 
 .widget-search__form .widget-search__field {
 	display: block;
 	margin: 0 auto;
 	/* width: 90%; */
-	width: 90%;
+	width: 100%;
 }
 
 /*** Widgets ***/
