@@ -1,4 +1,4 @@
-{{- if or .Site.Params.widgets.social_facebook .Site.Params.widgets.social_twitter .Site.Params.widgets.social_linkedin .Site.Params.widgets.social_github .Site.Params.widgets.social_google_plus .Site.Params.widgets.social_email .Site.Params.widgets.social_flickr }}
+{{- if or .Site.Params.widgets.social_facebook .Site.Params.widgets.social_twitter .Site.Params.widgets.social_linkedin .Site.Params.widgets.social_github .Site.Params.widgets.social_google_plus .Site.Params.widgets.social_email .Site.Params.widgets.social_google_scholar .Site.Params.widgets.social_flickr }}
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Also Me</h4>
 	<div class="widget-social__content widget__content">
@@ -13,8 +13,55 @@
 		{{- with .Site.Params.widgets.social_flickr }}
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Flickr" rel="noopener noreferrer" href="https://www.flickr.com/{{ . }}" target="_blank">
-                <svg class="widget-social__link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"><path d="M17 5c-1.961 0-3.731.809-5.002 2.108-1.27-1.299-3.038-2.108-4.998-2.108-3.866 0-7 3.134-7 7s3.134 7 7 7c1.96 0 3.728-.809 4.998-2.108 1.271 1.299 3.041 2.108 5.002 2.108 3.866 0 7-3.134 7-7s-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/></svg>
+                <svg class="widget-social__link-icon icon-flickr" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"><path d="M17 5c-1.961 0-3.731.809-5.002 2.108-1.27-1.299-3.038-2.108-4.998-2.108-3.866 0-7 3.134-7 7s3.134 7 7 7c1.96 0 3.728-.809 4.998-2.108 1.271 1.299 3.041 2.108 5.002 2.108 3.866 0 7-3.134 7-7s-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/></svg>
 				<span>Flickr</span>
+			</a>
+		</div>
+		{{- end }}
+		{{- with .Site.Params.widgets.social_google_scholar }}
+		<div class="widget-social__item widget__item">
+            <a class="widget-social__link widget__link btn" title="Google Scholar" rel="noopener noreferrer" href="https://scholar.google.com/citations?user={{ . }}" target="_blank">
+				<svg class="widget-social__link-icon icon-googlescholar" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0.000000,380.000000) scale(0.150000,-0.150000)" fill="#ffffff" stroke="none">
+                    <path d="M545 2070 l-330 -330 218 0 c130 0 216 -4 213 -9 -13 -21 15 -159 45
+                    -219 38 -78 126 -170 198 -206 63 -32 164 -56 241 -56 l55 0 -3 -79 c-3 -65 0
+                    -86 18 -121 12 -23 19 -44 16 -47 -2 -3 -42 -9 -88 -14 -142 -16 -255 -48
+                    -360 -102 -112 -57 -174 -116 -217 -207 -22 -49 -25 -68 -26 -170 0 -99 3
+                    -121 22 -155 54 -102 187 -194 332 -231 98 -25 470 -15 558 14 126 43 265 129
+                    322 201 17 21 47 74 68 116 30 64 37 92 41 157 3 45 -1 104 -7 134 -18 77 -94
+                    189 -175 255 -110 89 -208 183 -217 207 -15 39 16 85 122 183 109 101 149 157
+                    173 238 20 68 21 179 2 251 l-15 55 135 135 134 135 0 -43 c0 -29 -6 -48 -20
+                    -62 -19 -19 -20 -33 -20 -390 0 -357 1 -371 20 -390 27 -27 93 -27 120 0 19
+                    19 20 33 20 390 l0 371 -25 23 c-22 21 -25 31 -25 97 l0 73 62 63 62 63 -669
+                    0 -670 0 -330 -330z m702 41 c73 -34 132 -98 174 -188 51 -110 72 -193 72
+                    -288 0 -124 -32 -183 -128 -233 -77 -40 -154 -37 -227 7 -96 58 -157 161 -194
+                    327 -40 183 19 329 152 378 54 20 102 19 151 -3z m126 -1243 c51 -27 200 -155
+                    226 -194 62 -94 63 -187 2 -284 -54 -87 -141 -126 -308 -137 -183 -12 -336 38
+                    -430 140 -50 54 -67 103 -67 188 0 108 60 186 186 244 96 44 340 71 391 43z"/>
+                    </g>
+                </svg>
+				<span>Google Scholar</span>
+			</a>
+		</div>
+		{{- end }}
+		{{- with .Site.Params.widgets.social_orcid }}
+		<div class="widget-social__item widget__item">
+            <a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="http://orcid.org/{{ . }}" target="_blank">
+				<svg class="widget-social__link-icon icon-orcid" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                    <style type="text/css">
+                        .st1{fill:#000000;}
+                        .st0{fill:#FFFFFF;}
+                    </style>
+                    <g transform="translate(25.0, 20.0) scale(1.2,1.2)">
+                        <path class="st0" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/>
+                        <path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/>
+                        <path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
+                            c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+                        <path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
+                            C84.2,46.7,88.7,51.3,88.7,56.8z"/>
+                    </g>
+                </svg>
+				<span>ORCID</span>
 			</a>
 		</div>
 		{{- end }}
