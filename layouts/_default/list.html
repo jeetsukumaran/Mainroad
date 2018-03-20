@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 	<main class="main-content list content" role="main">
-		{{- if not .IsHome}}
+		{{- if not .Params.suppresstitle }}
 		{{- with .Title }}
 		<header class="page-header">
 			<h1 class="page-header__title">{{ . }}</h1>
