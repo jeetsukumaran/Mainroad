@@ -749,20 +749,44 @@ select {
 	margin-top: 20px;
 }
 
-.pagination__item {
-	display: inline-block;
-	font-weight: 700;
-	padding: 5px 5px;
-	/* background: #000000; */
-	border: solid 1px #000000;
-	border-radius: 20px;
-	color: #000000;
+.pagination li a {
+    color: #888080;
 }
 
-.pagination__item:hover, .pagination__item--current {
+.pagination li {
+	display: inline-block;
+	font-weight: 700;
+	padding: 0px 15px;
+	/* background: #888080; */
+	border: solid 1px #888080;
+	border-radius: 20px;
+	color: #888080;
+}
+
+.pagination li:hover,
+.pagination li:hover a,
+.pagination li a:hover
+{
 	color: #fafaf0;
 	background: #800000;
 }
+
+.pagination li.active,
+.pagination li.active a
+{
+	color: #fafaf0;
+	background: #888080;
+}
+
+.pagination li.disabled,
+.pagination li.disabled:hover,
+.pagination li.disabled a
+{
+	color: #888080;
+	background: none;
+	border: none;
+}
+
 
 /*** Post Navigation ***/
 .post-nav {
