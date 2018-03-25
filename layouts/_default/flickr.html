@@ -35,9 +35,9 @@
                 photoset = rsp.photosets.photoset[i]
                 s += '<li class="flickr-album-gallery__list__item">'
                 s += '<div class="flickr-album-gallery__list__item__wrapper">'
-                link = "http://www.flickr.com/photos/" + photoset.primary_photo_extras.owner_name + "/albums/" + photoset.id
-                s += '<a href="' + link + '">' + photoset.title._content + "</a>"
-                s += '<a href="' + link + '">' + '<img src="' + photoset.primary_photo_extras.url_sq + '" />' + "</a>"
+                link = "http://www.flickr.com/photos/" + photoset.primary_photo_extras.ownername + "/albums/" + photoset.id
+                s += '<a href="' + link + '" target="_blank">' + photoset.title._content + "</a>"
+                s += '<a href="' + link + '" target="_blank">' + '<img src="' + photoset.primary_photo_extras.url_sq + '" />' + "</a>"
                 s += "</div>"
                 s += "</li>"
             }
