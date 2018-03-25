@@ -99,8 +99,14 @@ body {
 }
 
 .sidebar {
-	width: 31.66%;
+	width: 29.00%;
 	float: left;
+	background: #dcd6d0;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 20px;
+	border-radius: 15px 15px 15px 15px;
+	border: 1px solid #000000;
 }
 
 .body-right-sidebar .main-content {
@@ -1207,33 +1213,4 @@ textarea {
 	.list__excerpt {
 		display: none;
 	}
-}
-
-div.gallery-item-content-wrapper {
-    text-align: center;
-}
-
-li.gallery-item {
-    display: block;
-    margin: auto;
-    padding: 2px;
-    float: left;
-    border: solid 1px #000000;
-    height: 150px;
-    overflow: hidden;
-}
-
-.gallery-item img {
-    display: block;
-    width: 150px;
-    height: 100px;
-    overflow: hidden;
-}
-
-.gallery-item a {
-    display: block;
-    font-weight: bold;
-}
-
-.gallery-item a:hover {
 }
