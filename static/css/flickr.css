@@ -1,9 +1,22 @@
 /** Mosaic Gallery **/
 
 div.flickr-mosaic-gallery__container {
+    padding: 15px;
+    background: #202020;
+    border-radius: 20px 20px 20px 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+div.flickr-mosaic-gallery__container__inner-wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+div.flickr-mosaic-gallery__cell {
 }
 
 /** Grid Gallery **/

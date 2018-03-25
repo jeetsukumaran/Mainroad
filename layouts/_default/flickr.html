@@ -17,13 +17,14 @@
             // http://farm{id}.static.flickr.com/{server-id}/{id}_{secret}_[mstb].jpg
             // http://www.flickr.com/photos/{user-id}/{photo-id}
             s += '<div class="flickr-mosaic-gallery__container">'
+            s += '<div class="flickr-mosaic-gallery__container__inner-wrapper">'
             for (var i=0; i < rsp.photos.photo.length; i++) {
                 photo = rsp.photos.photo[i];
                 t_url = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_" + "s.jpg";
                 p_url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
-                s +=  '<a href="' + p_url + '">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a>';
+                s +=  '<div class="flickr-mosaic-gallery__cell"><a href="' + p_url + '">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a></div>';
             }
-            s += "</div>"
+            s += "</div></div>"
             document.writeln(s);
         }
         function jsonFlickrAlbums(rsp) {
