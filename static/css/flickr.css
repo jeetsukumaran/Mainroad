@@ -3,15 +3,10 @@
 .flickr-gallery {
     margin-top: 1em;
     margin-bottom: 2em;
+    clear: both;
 }
 
 /** Strip Gallery **/
-
-.flickr-strip-gallery .container {
-}
-
-.flickr-strip-gallery .outer-wrapper {
-}
 
 .flickr-strip-gallery ul {
     margin: 0;
@@ -29,12 +24,6 @@
 
 /** Mosaic Gallery **/
 
-.flickr-mosaic-gallery .container {
-}
-
-.flickr-mosaic-gallery .outer-wrapper {
-}
-
 .flickr-mosaic-gallery ul {
     display: flex;
     flex-direction: row;
@@ -50,13 +39,6 @@
 }
 
 /** Grid Gallery **/
-
-.flickr-grid-gallery .container {
-    clear: both;
-}
-
-.flickr-grid-gallery .outer-wrapper {
-}
 
 .flickr-grid-gallery ul {
     display: flex;

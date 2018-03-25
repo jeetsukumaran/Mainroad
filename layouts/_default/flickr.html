@@ -16,8 +16,8 @@
             var s = "";
             // http://farm{id}.static.flickr.com/{server-id}/{id}_{secret}_[mstb].jpg
             // http://www.flickr.com/photos/{user-id}/{photo-id}
-            s += '<div class="flickr-gallery flickr-strip-gallery container">'
-            s += '<div class="outer-wrapper">'
+            s += '<div class="flickr-gallery flickr-strip-gallery outer-wrapper">'
+            s += '<div class="inner-wrapper">'
             s += '<ul>'
             for (var i=0; i < rsp.photos.photo.length; i++) {
                 photo = rsp.photos.photo[i];
@@ -31,7 +31,7 @@
         function jsonFlickrAlbums(rsp) {
             window.rsp = rsp;
             var s = "";
-            s += '<div class="flickr-gallery flickr-grid-gallery container"><div class="outer-wrapper">'
+            s += '<div class="flickr-gallery flickr-grid-gallery outer-wrapper"><div class="inner-wrapper">'
             s += '<ul>'
             for (var i=0; i < rsp.photosets.total; i++) {
                 photoset = rsp.photosets.photoset[i]
