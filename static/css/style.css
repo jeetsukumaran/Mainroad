@@ -99,14 +99,20 @@ body {
 }
 
 .sidebar {
-	width: 29.00%;
+	width: 31%;
 	float: left;
-	background: #dcd6d0;
-	padding-left: 1%;
-	padding-right: 1%;
+	background: #000000;
 	padding-top: 20px;
+	padding-bottom: 20px;
 	border-radius: 15px 15px 15px 15px;
 	border: 1px solid #000000;
+}
+
+.sidebar-inner {
+	background: #dcd6d0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
 }
 
 .body-right-sidebar .main-content {

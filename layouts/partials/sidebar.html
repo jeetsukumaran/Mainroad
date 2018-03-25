@@ -1,4 +1,5 @@
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+    <div class="sidebar-inner">
 	{{ partial "widgets/search.html" . }}
 	{{ partial "widgets/recent.html" . }}
 	{{ partial "widgets/categories.html" . }}
@@ -8,4 +9,5 @@
 	{{- if and (not .Site.Params.widgets.search) (not .Site.Params.widgets.recent_articles) (not .Site.Params.widgets.categories) (not .Site.Params.widgets.social) (not .Site.Params.widgets.taglist) }}
 	<p class="sidebar__warning"><strong>WARNING:</strong><br>Please activate at least one sidebar widget.</p>
 	{{- end }}
+    </div>
 </aside>
