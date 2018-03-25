@@ -16,34 +16,33 @@
             var s = "";
             // http://farm{id}.static.flickr.com/{server-id}/{id}_{secret}_[mstb].jpg
             // http://www.flickr.com/photos/{user-id}/{photo-id}
-            s += '<div class="flickr-mosaic-gallery__container">'
-            s += '<div class="flickr-mosaic-gallery__container__inner-wrapper">'
+            s += '<div class="flickr-gallery flickr-strip-gallery container">'
+            s += '<div class="outer-wrapper">'
+            s += '<ul>'
             for (var i=0; i < rsp.photos.photo.length; i++) {
                 photo = rsp.photos.photo[i];
                 t_url = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_" + "s.jpg";
                 p_url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
-                s +=  '<div class="flickr-mosaic-gallery__cell"><a href="' + p_url + '">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a></div>';
+                s +=  '<li><a href="' + p_url + '">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a></li>';
             }
-            s += "</div></div>"
+            s += '</ul></div></div>'
             document.writeln(s);
         }
         function jsonFlickrAlbums(rsp) {
             window.rsp = rsp;
             var s = "";
-            s += '<div class="flickr-grid-gallery__wrapper">'
-            s += '<ul class="flicker-grid-gallery__list">'
+            s += '<div class="flickr-gallery flickr-grid-gallery container"><div class="outer-wrapper">'
+            s += '<ul>'
             for (var i=0; i < rsp.photosets.total; i++) {
                 photoset = rsp.photosets.photoset[i]
-                s += '<li class="flickr-grid-gallery__list__item">'
-                s += '<div class="flickr-grid-gallery__list__item__wrapper">'
+                s += '<li>'
                 link = "http://www.flickr.com/photos/" + photoset.primary_photo_extras.ownername + "/albums/" + photoset.id
                 s += '<a href="' + link + '" target="_blank">' + photoset.title._content + "</a>"
                 s += '<a href="' + link + '" target="_blank">' + '<img src="' + photoset.primary_photo_extras.url_sq + '" />' + "</a>"
-                s += "</div>"
                 s += "</li>"
             }
             s += "</ul>"
-            s += "</div>"
+            s += "</div></div>"
             document.writeln(s);
         }
         </script>
