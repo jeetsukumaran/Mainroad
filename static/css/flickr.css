@@ -62,18 +62,21 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border-left: solid 1px #000000;
 }
 
 .flickr-grid-gallery li {
+    font-size: 12px;
     display: block;
-    margin: 0;
-    padding: 2px;
-    float: left;
+    margin-left: -1px;
+    margin-bottom: -1px;
     border: solid 1px #000000;
+    float: left;
     height: 120px;
     width: 120px;
     overflow: hidden;
     text-align: center;
+    padding: 1em;
 }
 
 .flickr-grid-gallery img {
