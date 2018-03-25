@@ -16,14 +16,23 @@
             var s = "";
             // http://farm{id}.static.flickr.com/{server-id}/{id}_{secret}_[mstb].jpg
             // http://www.flickr.com/photos/{user-id}/{photo-id}
+            s += '<div class="flickr-photos-gallery__container">'
+            s += '<div class="flickr-photos-gallery__row">'
             for (var i=0; i < rsp.photos.photo.length; i++) {
-            photo = rsp.photos.photo[i];
-            t_url = "http://farm" + photo.farm + ".static.flickr.com/" +
-                photo.server + "/" + photo.id + "_" + photo.secret + "_" + "t.jpg";
-            p_url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
-            s +=  '<a href="' + p_url + '">' + '<img alt="'+ photo.title +
-                '"src="' + t_url + '"/>' + '</a>';
+                photo = rsp.photos.photo[i];
+                t_url = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_" + "t.jpg";
+                p_url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
+                if ( (i % 6) == 0 ) {
+                    if (i > 0) {
+                        s += "</div>"
+                    }
+                    s += '<div class="flickr-photos-gallery__column">'
+                }
+                s +=  '<a href="' + p_url + '">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a>';
             }
+            s += "</div>"
+            s += "</div>"
+            s += "</div>"
             document.writeln(s);
         }
         function jsonFlickrAlbums(rsp) {
@@ -49,7 +58,7 @@
 
         <h2>Recent Photographs</h2>
 
-        <script src="http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={{ $.Params.flickr_api_key }}&user_id={{ $.Params.flickr_user_id }}&per_page=15&format=json&jsoncallback=jsonFlickrRecentPhotos"></script>
+        <script src="http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={{ $.Params.flickr_api_key }}&user_id={{ $.Params.flickr_user_id }}&per_page=18&format=json&jsoncallback=jsonFlickrRecentPhotos"></script>
 
 
         <h2>Albums</h2>
