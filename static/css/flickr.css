@@ -1,0 +1,38 @@
+
+
+div.flickr-album-gallery__wrapper {
+    text-align: center;
+    clear: both;
+}
+
+
+li.flickr-album-gallery__list__item {
+    display: block;
+    margin: auto;
+    padding: 2px;
+    float: left;
+    border: solid 1px #000000;
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    text-align: center;
+}
+
+div.flickr-album-gallery__list__item__wrapper {
+    text-align: center;
+}
+
+.flickr-album-gallery__list__item img {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.flickr-album-gallery__list__item a {
+    display: block;
+    font-weight: bold;
+}
+
+.flickr-album-gallery__list__item a:hover {
+}
