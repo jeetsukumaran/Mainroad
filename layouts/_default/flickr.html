@@ -17,7 +17,7 @@
             // http://farm{id}.static.flickr.com/{server-id}/{id}_{secret}_[mstb].jpg
             // http://www.flickr.com/photos/{user-id}/{photo-id}
             s += '<div class="flickr-gallery flickr-strip-gallery">'
-            s += '<div class="inner-wrapper">'
+            s += '<div class="outer-wrapper">'
             s += '<ul>'
             for (var i=0; i < rsp.photos.photo.length; i++) {
                 photo = rsp.photos.photo[i];
@@ -31,17 +31,35 @@
         function jsonFlickrAlbums(rsp) {
             window.rsp = rsp;
             var s = "";
-            s += '<div class="flickr-gallery flickr-grid-gallery"><div class="inner-wrapper">'
+            s += '<div class="flickr-gallery flickr-grid-gallery"><div class="outer-wrapper">'
             s += '<ul>'
             for (var i=0; i < rsp.photosets.total; i++) {
                 photoset = rsp.photosets.photoset[i]
                 s += '<li>'
                 link = "http://www.flickr.com/photos/" + photoset.primary_photo_extras.ownername + "/albums/" + photoset.id
                 s += '<a href="' + link + '" target="_blank">' + photoset.title._content + "</a>"
-                s += '<a href="' + link + '" target="_blank">' + '<img src="' + photoset.primary_photo_extras.url_sq + '" />' + "</a>"
+                s += '<a href="' + link + '" target="_blank">' + '<img src="' + photoset.primary_photo_extras.url_q + '" />' + "</a>"
                 s += "</li>"
             }
             s += "</ul>"
+            s += "</div></div>"
+            document.writeln(s);
+        }
+        function zzzjsonFlickrAlbums(rsp) {
+            window.rsp = rsp;
+            var s = "";
+            s += '<div class="flickr-gallery flickr-block-gallery"><div class="outer-wrapper">'
+            for (var i=0; i < rsp.photosets.total; i++) {
+                photoset = rsp.photosets.photoset[i]
+                link = "http://www.flickr.com/photos/" + photoset.primary_photo_extras.ownername + "/albums/" + photoset.id
+                s += '<div style="clear:both; width: 100%; margin-top: 1em; margin-bottom: 1em;">'
+                s += '<div style="border-radius: 20px 20px 20px 20px; background: #dcd6d0; padding: 10px">'
+                s += '<div style="float:left; width: 200px;"><a href="' + link + '" target="_blank">' + '<img src="' + photoset.primary_photo_extras.url_q + '" />' + "</a></div>"
+                s += '<div><h3><a href="' + link + '" target="_blank">' + photoset.title._content + "</a></h3></div>"
+                s += '<div style="clear:both"></div>'
+                s += "</div>"
+                s += "</div>"
+            }
             s += "</div></div>"
             document.writeln(s);
         }
@@ -54,7 +72,7 @@
 
         <h2>Albums</h2>
 
-        <script src="http://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key={{ $.Params.flickr_api_key }}&user_id={{ $.Params.flickr_user_id}}&primary_photo_extras=url_sq%2Cowner_name&format=json&jsoncallback=jsonFlickrAlbums"></script>
+        <script src="http://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key={{ $.Params.flickr_api_key }}&user_id={{ $.Params.flickr_user_id}}&primary_photo_extras=url_q%2Cowner_name&format=json&jsoncallback=jsonFlickrAlbums"></script>
 
 	</main>
 
