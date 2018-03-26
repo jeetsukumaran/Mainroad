@@ -8,18 +8,34 @@
 
 /** Strip Gallery **/
 
+.flickr-strip-gallery outer-wrapper {
+}
+
 .flickr-strip-gallery ul {
     margin: 0;
-    padding: 0;
     white-space: nowrap;
+    background-color: #404040;
+    border-radius: 20px 20px 20px 20px;
+    white-space: nowrap;
+    display: block;
     overflow-x: auto;
-    background-color: #ddd;
 }
 
 .flickr-strip-gallery li {
-    display: inline;
-    width: 150px;
-    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.flickr-strip-gallery img {
+}
+
+.DivHelper {
+    display: inline-block;
+    vertical-align: middle;
+    height:100%;
+    height: 200px;
+    line-height: 200px;
 }
 
 /** Mosaic Gallery **/
