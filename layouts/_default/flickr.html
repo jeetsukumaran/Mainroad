@@ -1,12 +1,14 @@
 
 {{ partial "header.html" . }}
 
-    <link rel="stylesheet" type="text/css" href="{{.Site.BaseURL}}css/flickr.css" />
+    <link rel="stylesheet" type="text/css" href="/css/flickr.css" />
 
 	<main class="main-content list content" role="main">
         {{- with .Content }}
         <div class="page-content">
+		<div class="post__content clearfix">
             {{ . }}
+        </div>
         </div>
         {{- end }}
 
