@@ -23,7 +23,7 @@
                 photo = rsp.photos.photo[i];
                 t_url = "http://farm" + photo.farm + ".static.flickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_m.jpg";
                 p_url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
-                s +=  '<li><a href="' + p_url + '">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a></li>';
+                s +=  '<li><a href="' + p_url + '" target="_blank">' + '<img alt="'+ photo.title + '"src="' + t_url + '"/>' + '</a></li>';
             }
             s += '</ul></div></div>'
             document.writeln(s);
